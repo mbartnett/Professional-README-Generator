@@ -1,4 +1,6 @@
-const questions = [
+// Array of README prompts
+
+const prompts = [
     {
         type: "input",
         name: "Username",
@@ -38,11 +40,6 @@ const questions = [
         type: "input",
         name: "Email",
         message: "Enter your email address.",
-    },
-    {
-        type: "input",
-        name: "Questions",
-        message: "Contact Information: ",
     },
     {
         type: "list",
