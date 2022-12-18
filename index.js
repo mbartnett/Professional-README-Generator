@@ -1,6 +1,10 @@
 // Array of README prompts
 
-const prompts = [
+const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown')
+const fs = require('fs')
+
+const questions = [
     {
         type: "input",
         name: "Username",
@@ -42,9 +46,23 @@ const prompts = [
         message: "Enter your email address.",
     },
     {
+        type: "input",
+        name: "Contributors",
+        message: "List any contributors",
+    },
+    {
         type: "list",
         name: "License",
         message: "The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.",
         choices: ["MIT", "ISC", "None"],
     },
 ];
+
+function init(){
+    inquirer.prompt(questions).then(response =>{
+        console.log(response)
+        fs.writeFileSync('./output/README.md', generateMarkdown(response))
+    })
+}
+
+init()
