@@ -54,7 +54,7 @@ const questions = [
         type: "list",
         name: "License",
         message: "The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.",
-        choices: ["MIT", "ISC", "None"],
+        choices: ["MIT", "Apache 2.0", "None"],
     },
 ];
 
