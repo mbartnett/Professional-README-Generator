@@ -36,16 +36,16 @@ function generateMarkdown(response) {
   
   ${response.Description}
   
-  ## Table of Contents (Optional)
-  
-  If your README is long, add a table of contents to make it easy for users to find what they need.
+  ## Table of Contents
   
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
-  - [Contributors](#contributors)
-  
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
   ## Installation
   
 ${response.Installation}
@@ -55,22 +55,26 @@ ${response.Installation}
   ${response.Usage}
   
   ## Credits
-  
-${response.Credits}
-  
+
+  ${response.Credits}
+
   ## License
   
 ${response.License}
   
   ## How to Contribute
 
-  ${response.Contributors}
+  ${response.Contributing}
   
   If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
   
   ## Tests
   
-  Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+${response.Tests}
+
+  ## Questions
+
+${response.Questions}  
 `;
 }
 
