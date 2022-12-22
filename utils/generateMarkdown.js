@@ -29,44 +29,43 @@ function renderLicenseSection(response, license) {
 function generateMarkdown(response) {
   return `# ${response.Title}
   
-  ${renderLicenseBadge(response.License)}
+${renderLicenseBadge(response.License)}
 
-  ## Description
-  
-  ${response.Description}
-  
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+## Description
 
-  ## Installation
-  
+${response.Description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+
 ${response.Installation}
-  
-  ## Usage
-  
-  ${response.Usage}
-  
-  ## License
-  
-  ${renderLicenseSection(response, response.License)}
-  
-  ## How to Contribute
 
-  ${response.Contributing}
-  
-  ## Tests
-  
+## Usage
+
+${response.Usage}
+
+## License
+
+${renderLicenseSection(response, response.License)}
+
+## How to Contribute
+
+${response.Contributing}
+
+## Tests
+
 ${response.Tests}
 
-  ## Questions
+## Questions
 
-[github.com/${response.Username}](https://github.com/${response.Username})<br>
-Contact: ${response.Email}    
+Contact: ${response.Email}, [github.com/${response.Username}](https://github.com/${response.Username})    
 `;
 }
 
