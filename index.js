@@ -1,67 +1,66 @@
-// Array of README prompts
+// Node.js `requires`
 
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown')
 const fs = require('fs')
 
+// Array of README question prompts
+
 const questions = [
+    // {
+    //     type: "input",
+    //     name: "Name",
+    //     message: "What is your full name?",
+    // },
+    {
+        type: "input",
+        name: "Email",
+        message: "What is your email address?",
+    },
     {
         type: "input",
         name: "Username",
-        message: "GitHub Username: ",
+        message: "What is your GitHub username?",
     },
     {
         type: "input",
         name: "Title",
-        message: "What is the title of your project?",
+        message: "What is the title of your application?",
     },
     {
         type: "input",
         name: "Description",
-        message: "Provide a short description explaining the what, why, and how of your project. What was your motivation? Why did you build this project? What problem does it solve? What did you learn?",
+        message: "Provide a short description for your application.",
     },
     {
         type: "input",
         name: "Installation",
-        message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.",
+        message: "What are the steps required to install your application?",
     },
     {
         type: "input",
         name: "Usage",
-        message: "Provide instructions and examples for use. Include screenshots as needed. To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:\n\n```md\n![alt text](assets/images/screenshot.png)\n```\n\n",
-    },
-    {
-        type: "input",
-        name: "Credits",
-        message: "List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well.",
+        message: "Provide instructions for use of your application.",
     },
     {
         type: "list",
         name: "License",
-        message: "The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project.",
+        message: "Choose a license for your applicaiton.",
         choices: ["MIT", "Apache 2.0", "None"],
     },
     {
         type: "input",
         name: "Contributing",
-        message: "If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.",
+        message: "Provide guidelines for how to contribute to your application."
     },
     {
         type: "input",
         name: "Tests",
-        message: "Go the extra mile and write tests for your application. Then provide examples on how to run them here.",
-    },
-    {
-        type: "input",
-        name: "GitHub",
-        message: "What is your GitHub username?",
-    },
-    {
-        type: "input",
-        name: "Email",
-        message: "What is your email address",
+        message: "Provide examples of how to write tests for your application.",
     },
 ];
+
+// Function that initalizes the questions and logs the answers
 
 function init(){
     inquirer.prompt(questions).then(response =>{
