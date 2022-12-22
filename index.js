@@ -7,11 +7,11 @@ const fs = require('fs')
 // Array of README question prompts
 
 const questions = [
-    // {
-    //     type: "input",
-    //     name: "Name",
-    //     message: "What is your full name?",
-    // },
+    {
+        type: "input",
+        name: "Name",
+        message: "What is your full name?",
+    },
     {
         type: "input",
         name: "Email",

@@ -4,7 +4,7 @@
 
   ## Description
   
-  This application uses Node.js to creates a README file using the command line.
+  Node.js, the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4), and Moment.js are required for this application. 
   
   ## Table of Contents
   - [Installation](#installation)
@@ -17,19 +17,15 @@
 
   ## Installation
   
-Node.js, the [https://www.npmjs.com/package/inquirer/v/8.2.4](Inquirer package), and Moment.js are required for this application. 
+This application uses Node.js to creates a README file using the command line.
   
   ## Usage
   
   Answer the questions when prompted using the command line in order to automatically generate a README file. 
   
-  ## Credits
-
-  undefined
-
   ## License
   
-  Copyright © 2022. Distributed under the [https://opensource.org/licenses/MIT](MIT) License.
+  Copyright © 2022. Distributed under the [MIT](https://opensource.org/licenses/MIT) License.
   
   ## How to Contribute
 
@@ -41,5 +37,5 @@ Test the application by typing "node index.js" in the command line while in the 
 
   ## Questions
 
-[https://github.com/undefined](https://github.com/undefined)<br>
+[github.com/mbartnett](https://github.com/mbartnett)<br>
 Contact: mbartnett@gmail.com    

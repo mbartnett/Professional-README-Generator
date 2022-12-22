@@ -16,9 +16,9 @@ function renderLicenseBadge(license) {
 // A function that returns the license messaging
 function renderLicenseSection(license) {
   if (license === 'MIT') {
-    licenseSection = `Copyright © ${moment().format('YYYY')}. Distributed under the [https://opensource.org/licenses/MIT](MIT) License.`
+    licenseSection = `Copyright © ${moment().format('YYYY')}. Distributed under the [MIT](https://opensource.org/licenses/MIT) License.`
   } else if (license === 'Apache 2.0') {
-    licenseSection = `Copyright © ${moment().format('YYYY')}. Distributed under the [https://opensource.org/licenses/Apache-2.0](Apache 2.0) License.`
+    licenseSection = `Copyright © ${moment().format('YYYY')}. Distributed under the [Apache 2.0](https://opensource.org/licenses/Apache-2.0) License.`
   } else {
     licenseSection = `This is a free and unencumbered application released into the public domain.`
   }
@@ -38,7 +38,6 @@ function generateMarkdown(response) {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
@@ -66,7 +65,7 @@ ${response.Tests}
 
   ## Questions
 
-[https://github.com/${response.GitHub}](https://github.com/${response.Username})<br>
+[github.com/${response.Username}](https://github.com/${response.Username})<br>
 Contact: ${response.Email}    
 `;
 }
