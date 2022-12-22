@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mbartnett/Professional-README-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "moment": "^2.29.4"
   }
 }
