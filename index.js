@@ -60,7 +60,7 @@ const questions = [
     },
 ];
 
-// Function that initalizes the questions and logs the answers
+// Function that initalizes the questions, logs the answers, and generates the README.md file
 
 function init(){
     inquirer.prompt(questions).then(response =>{

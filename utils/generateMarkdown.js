@@ -14,11 +14,11 @@ function renderLicenseBadge(license) {
 }
 
 // A function that returns the license messaging
-function renderLicenseSection(license) {
+function renderLicenseSection(response, license) {
   if (license === 'MIT') {
-    licenseSection = `Copyright © ${moment().format('YYYY')}. Distributed under the [MIT](https://opensource.org/licenses/MIT) License.`
+    licenseSection = `Copyright © ${moment().format('YYYY')}, ${response.Name}. Distributed under the [MIT](https://opensource.org/licenses/MIT) License.`
   } else if (license === 'Apache 2.0') {
-    licenseSection = `Copyright © ${moment().format('YYYY')}. Distributed under the [Apache 2.0](https://opensource.org/licenses/Apache-2.0) License.`
+    licenseSection = `Copyright © ${moment().format('YYYY')}, ${response.Name}. Distributed under the [Apache 2.0](https://opensource.org/licenses/Apache-2.0) License.`
   } else {
     licenseSection = `This is a free and unencumbered application released into the public domain.`
   }
@@ -53,7 +53,7 @@ ${response.Installation}
   
   ## License
   
-  ${renderLicenseSection(response.License)}
+  ${renderLicenseSection(response, response.License)}
   
   ## How to Contribute
 
@@ -70,5 +70,5 @@ Contact: ${response.Email}
 `;
 }
 
-// Generates the README.md file
+// Exports the contents of the README.md file
 module.exports = generateMarkdown;
