@@ -20,7 +20,7 @@ Node.js, the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4),
 
 ## Usage
 
-Answer the questions when prompted using the command line in order to automatically generate a README file. 
+Answer the questions when prompted using the command line in order to automatically generate a README file.<br><br>![Professional README Generator](Professional-README-Generator.png)
 
 ## License
 
