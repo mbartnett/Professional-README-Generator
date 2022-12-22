@@ -74,7 +74,8 @@ ${response.Tests}
 
   ## Questions
 
-${response.Questions}  
+${response.GitHub}
+${response.Email}    
 `;
 }
 
